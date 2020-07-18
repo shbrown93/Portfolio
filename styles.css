@@ -1,0 +1,140 @@
+body {
+  background-color:#c3ebe2;
+  font-family: 'Yantramanav', sans-serif;
+}
+.container {
+  max-width: 840px;
+  margin: 0 auto;
+}
+.profilePicture {
+  border-radius: 46%;  /* this turns a square image into a circle. less than 50% makes it a little squarish */
+  width: 150px;
+  height: 150px;
+  box-shadow: 0 4px 6px 0 #0f4455; /* horizontal length (negative for invert), vertical length, blur radius, spread radius, color */
+  transition: all ease-in-out .2s; /*defines animation. ease-in-out is timing fn. */
+}
+.profilePicture:hover { /* sets post-animation image */
+  width: 160px;
+  height: 160px;
+  filter: brightness(1.07);
+  box-shadow: 0 10px 15px 0 #0f4455;
+}
+.quote {
+  font-style: italic;
+}
+.intro {
+  text-align: center;
+  color:#790d2a;
+}
+.name {
+  color:#c43f62;
+  font-style: bold;
+  font-family: 'Raleway', sans-serif;
+}
+h4 {
+  font-style: bold;
+  font-family: 'Raleway', sans-serif;
+}
+#socialMedia {
+  color:#c43f62;
+}
+.colorText {
+  color: #e2057f;
+}
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+@media (max-width: 480px) {
+  .aboutGrid {
+    grid-template-columns: 100%
+  }
+}
+.currentlyWorking, .aboutMe {
+  text-align: center;
+  text-decoration: none;
+}
+.projectGrid {
+  display: grid;
+  grid-template-columns: 50% 50%
+}
+@media (max-width: 480px) {
+  .projectGrid {
+    grid-template-columns: 100%;
+  }
+}
+.myProjects {
+  text-align: center;
+}
+.projectImage {
+  border-radius: 30%;
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 6px 0 #330f55;
+  transition: all ease-in-out .2s;
+}
+.projectImage:hover {
+  width: 320px;
+  height: 320px;
+  filter: brightness(.50); /* this dims the brightness when you hover on it. no space before () */
+  box-shadow: 0 10px 15px 0 #330f55;
+}
+.projectImageWrapper {
+  justify-self: center;
+  padding: 4%;
+  position: relative;
+}
+.projectImageWrapper:hover > h4 {
+  visibility: visible;
+}
+.projectImageWrapper:hover > h4 ~ img { /* hovering over h4 text affects img in same div. wont work if change to class type */
+  width: 320px;
+  height: 320px;
+  filter: brightness(.50);
+  box-shadow: 0 10px 15px 0 #330f55;
+}
+.projectImageWrapper > h4 {
+  position: absolute; /* absolute positions this item inside the 'parent', which is position relative */
+  top: 50%; /* the top/left 50% positions this item center inside parent */
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);/* also helps center child inside parent */
+  color: white;
+  visibility: hidden;
+  z-index: 2; /* THIS stacks items! higher z is on top */
+  transition: all ease-in-out .2s;
+}
+form input, textarea {
+  padding: 5px;
+  border-radius: 5px;
+  width: 240px;
+}
+form {
+  width: 250px;
+  margin: 0 auto;
+}
+form input[type="submit"] {
+  width: 250px;
+}
+.submitButtonWrapper {
+  margin: 20px 0;
+}
+.linksAndContact {
+  display: grid;
+  grid-template-columns: 30% 30% 40%;
+}
+@media (max-width: 480px) {
+  .linksAndContact {
+    grid-template-columns: 100%;
+  }
+}
+.Links {
+  justify-self: center;
+}
+.Message, .Email {
+  justify-self: center;  /* vertical center */
+  align-self: center;  /*horizontal center */
+}

@@ -2,47 +2,86 @@
 <html>
   <head>
     <title>Stephanie Brown - Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Yantramanav&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div>
-      <center>
-        <img src="images/icon.jpeg" width="150" alt="Icon"/>
-        <h1>Stephanie Brown</h1>
-        <h3>Illustrator and Comic Artist</h3>
-        <p>Welcome to my website!</p>
-      </center>
+    <div class="container">
+      <div class="intro">
+        <img src="images/icon.png" alt="Icon" class="profilePicture"/>
+        <h1 class="name">
+          <font size=+10><strong>Stephanie Brown</strong></font>
+        </h1>
+        <h3>Illustrator, Web Developer, Comic Artist</h3>
+        <p class="quote">Welcome</p>
+      </div>
+      <div class="aboutGrid">
+        <div class="currentlyWorking">
+          <p>
+            Currently working on webcomic <span class="colorText"> Death and 
+            the Maiden,</span> a heartfelt comedy
+            about life, friendship, necromancy, life, and friendship. 
+           <span class="colorText"> Death and the Maiden </span>
+           will begin to publish pages weekly in Fall 2020.
+          </p> 
+        </div>
+        <div class="aboutMe">
+          <p>
+            In my spare time, I love to listen to music, watch cartoons, play
+            video games, go hiking, taste hazy IPAs at craft breweries, and 
+            write semi-ironic dating profiles to put on the websites I'm 
+            learning to code.
+          </p>
+        </div>
+      </div>
+      <h2 class="myProjects">My Projects</h2>
+      <div class="projectGrid">
+        <div class="projectImageWrapper">
+          <h4 class="projectHeader">Death and the Maiden</h4>
+          <img src="images/DATM.png" alt="Death and the Maiden Comic" class=projectImage />
+        </div>
+        <div class="projectImageWrapper">
+          <h4 class="projectHeader">Comission Information</h4>
+          <img src="images/Commissions.png"  alt="Commission Information" class=projectImage />
+        </div>
+        <div class="projectImageWrapper">
+          <h4 class="projectHeader">Miraculous Ladybug Fanart</h4>
+          <img src="images/ML.png" alt="Miraculous Ladybug Fanart" class=projectImage />
+        </div>
+        <div class="projectImageWrapper">
+          <h4 class="projectHeader">Other Fanart</h4>
+          <img src="images/Fanart.png" alt="Other Fanart" class=projectImage />
+        </div>
+      </div>
+      <div class="linksAndContact">
+        <div class="Links">
+          <h3 id="socialMedia">Find Me On Social Media</h3>
+          <ul>
+           <li><a href="https://www.instagram.com/steph_thebrown/">Instagram</a></li>
+           <li><a href="https://twitter.com/ShhhBrown">Twitter</a></li>
+          </ul>
+        </div>
+        <div class="Email">
+          <form action="#">
+           <label for="email">
+             <h4>Email:</h4> 
+             <input type="email" id="email" placeholder="Enter your email"/>
+           </label>
+        </div>
+        <div class="Message">
+           <label for="message">
+             <h4>Message:</h4> 
+             <textarea id="message">Your Message</textarea>
+           </label>
+           <div class="submitButtonWrapper">
+             <input type="submit" value="Send Message" id="submitButton"/>
+           </div>
+         </form>
+        </div>
+      </div>
     </div>
-    <div>
-      <center>
-      <h2>My Projects</h2>
-        <p>
-          <img src="images/icon.jpeg" width="300" alt="Project 1"/>
-          <img src="images/icon.jpeg" width="300" alt="Project 2"/>
-        </p>
-        <p>
-          <img src="images/icon.jpeg" width="300" alt="Project 3"/>
-          <img src="images/icon.jpeg" width="300" alt="Project 4"/>
-        </p>
-      </center>
-    </div>
-    <div>
-      <h3>Find Me On Social Media</h3>
-      <ul>
-        <li><a href="https://www.instagram.com/steph_thebrown/">Instagram</a></li>
-        <li><a href="https://twitter.com/ShhhBrown">Twitter</a></li>
-      </ul>
-    </div>
-    <div>
-      <form action="#">
-        <label for="email">
-          Email: <input type="email" id="email" placeholder="Enter your email"/>
-        </label>
-        <label for="message">
-          Message: <textarea id="message">Your Message</textarea>
-        </label>
-        <input type="submit" valid="Send Message"/>
-      </form>
-    </div>
+    <script src="script.js"></script>
   </body>
 </html>
 
